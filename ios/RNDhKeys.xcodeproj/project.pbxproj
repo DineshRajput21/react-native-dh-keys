@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69FEECA9962D28EA6ADED63D /* Pods_RNDhKeys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3625483C13F354DB01919A70 /* Pods_RNDhKeys.framework */; };
 		6E4C4B512637F77600C44F8D /* IOSNativeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4C4B502637F77600C44F8D /* IOSNativeToast.m */; };
 		6EEC9A8F2636D90400B46D69 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEC9A772636D8E400B46D69 /* libReact.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNDhKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNDhKeys.m */; };
@@ -85,9 +86,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNDhKeys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNDhKeys.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3625483C13F354DB01919A70 /* Pods_RNDhKeys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNDhKeys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4C4B472637F77600C44F8D /* IOSNativeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSNativeToast.h; path = "../../../../../Downloads/RNNativeLibrary-IOSToastFiles (2)/IOSNativeToast.h"; sourceTree = "<group>"; };
 		6E4C4B502637F77600C44F8D /* IOSNativeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSNativeToast.m; path = "../../../../../Downloads/RNNativeLibrary-IOSToastFiles (2)/IOSNativeToast.m"; sourceTree = "<group>"; };
 		6EEC9A6B2636D8E400B46D69 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		7ACA5EB5DF13569D76317FF6 /* Pods-RNDhKeys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDhKeys.release.xcconfig"; path = "Target Support Files/Pods-RNDhKeys/Pods-RNDhKeys.release.xcconfig"; sourceTree = "<group>"; };
+		84CD7A225EF843E0AFA7DE1A /* Pods-RNDhKeys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDhKeys.debug.xcconfig"; path = "Target Support Files/Pods-RNDhKeys/Pods-RNDhKeys.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNDhKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDhKeys.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNDhKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDhKeys.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EEC9A8F2636D90400B46D69 /* libReact.a in Frameworks */,
+				69FEECA9962D28EA6ADED63D /* Pods_RNDhKeys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +126,7 @@
 				B3E7B5891CC2AC0600A0062D /* RNDhKeys.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				6EEC9A6A2636D8E400B46D69 /* Frameworks */,
+				D8795BD1A2A41A58CAEF66A8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				6EEC9A6B2636D8E400B46D69 /* React.xcodeproj */,
+				3625483C13F354DB01919A70 /* Pods_RNDhKeys.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +154,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D8795BD1A2A41A58CAEF66A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84CD7A225EF843E0AFA7DE1A /* Pods-RNDhKeys.debug.xcconfig */,
+				7ACA5EB5DF13569D76317FF6 /* Pods-RNDhKeys.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNDhKeys" */;
 			buildPhases = (
+				DA340E8664E62334D50E6826 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -264,6 +282,31 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DA340E8664E62334D50E6826 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNDhKeys-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -360,6 +403,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84CD7A225EF843E0AFA7DE1A /* Pods-RNDhKeys.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +420,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ACA5EB5DF13569D76317FF6 /* Pods-RNDhKeys.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
