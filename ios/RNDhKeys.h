@@ -1,7 +1,11 @@
-#import <Foundation/Foundation.h>
 
+#if __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
+#else
+#import <React/RCTBridgeModule.h>
+#endif
 
-@interface IOSNativeToast : NSObject
--(void) showToast:(NSString*) msg;
--(void) showToast:(NSString*) msg duration:(double) duration;
+@interface RNDhKeys : NSObject <RCTBridgeModule>
+
 @end
+  

@@ -1,43 +1,37 @@
 
 
 #import "RNDhKeys.h"
+#import "IOSNativeToast.h"
 #import <UIKit/UIKit.h>
 
-@implementation IOSNativeToast
+@interface RNDhKeys()
+@property (nonatomic, retain) IOSNativeToast *toast;
 
-static double const DEFAULT_TOAST_DURATION = 3.5;
+@end
 
--(void) showToast:(NSString*) msg
-{
-    [self showToast:msg duration:DEFAULT_TOAST_DURATION];
-}
+@implementation RNDhKeys
 
--(void) showToast:(NSString*) msg duration:(double) duration
-{
-    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UIViewController* rootVC = [[UIViewController alloc] init];
-    if (rootVC == nil || window == nil)
-    {
-        return;
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.toast = [[IOSNativeToast alloc] init];
     }
-    
-    window.backgroundColor = [UIColor clearColor];
-    window.rootViewController = rootVC;
-    [window makeKeyAndVisible];
-    
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    [rootVC presentViewController:alert animated:YES completion:nil];
-    
-    [self closeToast:window alert:alert duration:duration];
+    return self;
 }
 
-- (void) closeToast:(UIWindow*) window alert:(UIAlertController*) alert duration:(double) duration
++ (BOOL)requiresMainQueueSetup
 {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [alert dismissViewControllerAnimated:YES completion:nil];
-        [window removeFromSuperview];
-    });
+    return YES;
+}
+
+- (dispatch_queue_t)methodQueue
+{
+    return dispatch_get_main_queue();
+}
+RCT_EXPORT_MODULE()
+RCT_EXPORT_METHOD(show:(NSString *)text)
+{
+    [self.toast showToast:text];
 }
 
 @end
