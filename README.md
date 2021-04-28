@@ -14,7 +14,7 @@
 import DHKeys from 'react-native-dh-keys';
 
 //Create Client Public and Private keys using P and G values
-DHKeys.getEncodedPublicKeyFromPg(P, G, ({ clientPrivateKey, clientPublicKey }) => {
+DHKeys.getEncodedPublicKeyFromPg(P, G, ).then(({ clientPrivateKey, clientPublicKey }) => {
 	console.log(`Private Key:  ${clientPrivateKey}  Public Key: ${clientPublicKey}`)
 });
 

@@ -1,0 +1,6 @@
+module Pods_DhKeysExample {
+  umbrella header "Pods-DhKeysExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

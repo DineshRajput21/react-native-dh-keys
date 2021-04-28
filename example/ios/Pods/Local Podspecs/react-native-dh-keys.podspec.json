@@ -1,0 +1,21 @@
+{
+  "name": "react-native-dh-keys",
+  "version": "1.2.0",
+  "summary": "DH key exchanges",
+  "homepage": "https://github.com/DineshRajput21/react-native-dh-keys#readme",
+  "license": "MIT",
+  "authors": "Dinesh Sambial <dineshsambial@gmail.com> (https://github.com/DineshRajput21)",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/DineshRajput21/react-native-dh-keys.git",
+    "tag": "1.2.0"
+  },
+  "source_files": "ios/**/*.{h,m,mm}",
+  "dependencies": {
+    "React-Core": [
+
+    ]
+  }
+}
