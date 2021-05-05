@@ -1,0 +1,6 @@
+framework module BigNumber {
+  umbrella header "BigNumber-umbrella.h"
+
+  export *
+  module * { export * }
+}

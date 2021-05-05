@@ -7,29 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		5E555C0D2413F4C50049A1A2 /* DhKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* DhKeys.m */; };
-
+		6E2952CB2642869200A3C7AE /* Pods_DhKeys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2952CA2642869200A3C7AE /* Pods_DhKeys.framework */; };
+		6E2952CE264286BF00A3C7AE /* BigNumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2952CD264286BF00A3C7AE /* BigNumber.framework */; };
+		F4FF95D7245B92E800C19C63 /* DhKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* DhKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+		58B511D91A9E6C8500147676 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0198E3F5663B159383241F60 /* Pods-DhKeys.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhKeys.release.xcconfig"; path = "Target Support Files/Pods-DhKeys/Pods-DhKeys.release.xcconfig"; sourceTree = "<group>"; };
 		134814201AA4EA6300B7C361 /* libDhKeys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDhKeys.a; sourceTree = BUILT_PRODUCTS_DIR; };
-
-		B3E7B5881CC2AC0600A0062D /* DhKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DhKeys.h; sourceTree = "<group>"; };
+		6E2952CA2642869200A3C7AE /* Pods_DhKeys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_DhKeys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2952CD264286BF00A3C7AE /* BigNumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BigNumber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89B970AA9FCC7AAF70EFF225 /* Pods-DhKeys.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DhKeys.debug.xcconfig"; path = "Target Support Files/Pods-DhKeys/Pods-DhKeys.debug.xcconfig"; sourceTree = "<group>"; };
+		AB288C7095DA2D249C765E70 /* Pods_DhKeys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DhKeys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5891CC2AC0600A0062D /* DhKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DhKeys.m; sourceTree = "<group>"; };
-
+		F4FF95D5245B92E700C19C63 /* DhKeys-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DhKeys-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4FF95D6245B92E800C19C63 /* DhKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DhKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E2952CE264286BF00A3C7AE /* BigNumber.framework in Frameworks */,
+				6E2952CB2642869200A3C7AE /* Pods_DhKeys.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +61,32 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-
-				B3E7B5881CC2AC0600A0062D /* DhKeys.h */,
+				F4FF95D6245B92E800C19C63 /* DhKeys.swift */,
 				B3E7B5891CC2AC0600A0062D /* DhKeys.m */,
-
+				F4FF95D5245B92E700C19C63 /* DhKeys-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				913064376CE94397469F9C20 /* Pods */,
+				DE18D11A0544EEEED6A7FDA5 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		913064376CE94397469F9C20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89B970AA9FCC7AAF70EFF225 /* Pods-DhKeys.debug.xcconfig */,
+				0198E3F5663B159383241F60 /* Pods-DhKeys.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE18D11A0544EEEED6A7FDA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E2952CD264286BF00A3C7AE /* BigNumber.framework */,
+				6E2952CA2642869200A3C7AE /* Pods_DhKeys.framework */,
+				AB288C7095DA2D249C765E70 /* Pods_DhKeys.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,15 +96,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "DhKeys" */;
 			buildPhases = (
+				F680A5AF05B3DFDE0B3D5DB6 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
+				58B511D91A9E6C8500147676 /* Copy Files */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DhKeys;
+			packageProductDependencies = (
+			);
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libDhKeys.a */;
 			productType = "com.apple.product-type.library.static";
@@ -105,6 +135,8 @@
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
+			packageReferences = (
+			);
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
 			projectRoot = "";
@@ -114,14 +146,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F680A5AF05B3DFDE0B3D5DB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DhKeys-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				B3E7B58A1CC2AC0600A0062D /* DhKeys.m in Sources */,
-
+				F4FF95D7245B92E800C19C63 /* DhKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,35 +278,42 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B970AA9FCC7AAF70EFF225 /* Pods-DhKeys.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../../../ios/Pods/BigNumber/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DhKeys;
 				SKIP_INSTALL = YES;
-
+				SWIFT_OBJC_BRIDGING_HEADER = "DhKeys-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0198E3F5663B159383241F60 /* Pods-DhKeys.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../../../ios/Pods/BigNumber/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DhKeys;
 				SKIP_INSTALL = YES;
-
+				SWIFT_OBJC_BRIDGING_HEADER = "DhKeys-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

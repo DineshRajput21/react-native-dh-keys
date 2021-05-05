@@ -23,11 +23,17 @@ export default function App() {
   const [clientScret, setClientScecretKey] = React.useState('');
 
   const generateSecretKey = async () => {
-    DhKeys.getEncodedPublicKeyFromPg(PG.p, PG.g).then(({ clientPrivateKey, clientPublicKey })=>{
-      const sharedKey = DhKeys.getSharedSecretHex(serverPublicKey, clientPrivateKey);
-      setClientScecretKey(sharedKey);
-    });
+    DhKeys.getEncodedPublicKeyFromPg(3, 7).then(response => {
+           alert(response);
+    })
+    // DhKeys.multiply(3, 7).then(res => {
+    //          alert(res);
+    // });
 
+    // DhKeys.getEncodedPublicKeyFromPg(PG.p, PG.g).then(({ clientPrivateKey, clientPublicKey })=>{
+    //   const sharedKey = DhKeys.getSharedSecretHex(serverPublicKey, clientPrivateKey);
+    //   setClientScecretKey(sharedKey);
+    // });
   }
   const encryptMeClick = () => {
   }

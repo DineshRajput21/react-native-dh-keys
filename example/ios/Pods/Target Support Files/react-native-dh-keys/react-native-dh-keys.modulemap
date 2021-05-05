@@ -1,0 +1,6 @@
+module react_native_dh_keys {
+  umbrella header "react-native-dh-keys-umbrella.h"
+
+  export *
+  module * { export * }
+}
