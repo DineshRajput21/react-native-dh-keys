@@ -1,6 +1,6 @@
 {
   "name": "react-native-dh-keys",
-  "version": "0.1.0",
+  "version": "1.2.2",
   "summary": "Dh keys exchange solution",
   "homepage": "https://github.com/DineshRajput21/react-native-dh-keys#readme",
   "license": "MIT",
@@ -10,11 +10,14 @@
   },
   "source": {
     "git": "https://github.com/DineshRajput21/react-native-dh-keys.git",
-    "tag": "0.1.0"
+    "tag": "1.2.2"
   },
   "source_files": "ios/**/*.{h,m,mm,swift}",
   "dependencies": {
     "React-Core": [
+
+    ],
+    "BigInt": [
 
     ]
   }

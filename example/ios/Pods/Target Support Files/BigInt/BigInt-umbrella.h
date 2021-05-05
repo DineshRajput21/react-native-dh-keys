@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "DhKeys-Bridging-Header.h"
 
-FOUNDATION_EXPORT double react_native_dh_keysVersionNumber;
-FOUNDATION_EXPORT const unsigned char react_native_dh_keysVersionString[];
+FOUNDATION_EXPORT double BigIntVersionNumber;
+FOUNDATION_EXPORT const unsigned char BigIntVersionString[];
 
