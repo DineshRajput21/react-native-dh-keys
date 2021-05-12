@@ -1,6 +1,6 @@
 {
   "name": "react-native-dh-keys",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Dh keys exchange solution",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",

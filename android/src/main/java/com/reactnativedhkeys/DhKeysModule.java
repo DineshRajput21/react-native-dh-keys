@@ -71,9 +71,9 @@ public class DhKeysModule extends ReactContextBaseJavaModule {
     promise.resolve(keysObject);
   }
 
-   @ReactMethod(isBlockingSynchronousMethod = true)
-   public String getSharedSecretHex(
-           final String serverHexPubKey, final String clientPrivateHexKey
+   @ReactMethod
+   public void getSharedSecretHex(
+           final String serverHexPubKey, final String clientPrivateHexKey, Promise promise
    ) throws NoSuchAlgorithmException, InvalidKeyException, InvalidKeySpecException {
     final KeyFactory keyFac = KeyFactory.getInstance(DH_ALGO);
     
@@ -88,7 +88,7 @@ public class DhKeysModule extends ReactContextBaseJavaModule {
     final KeyAgreement keyAgree = KeyAgreement.getInstance(DH_ALGO);
     keyAgree.init(clientPrivateKey);
     keyAgree.doPhase(serverPubKey, true);
-    return bytesToHex(keyAgree.generateSecret());
+    promise.resolve(bytesToHex(keyAgree.generateSecret()));
    }
 
     public static native int nativeMultiply(int a, int b);

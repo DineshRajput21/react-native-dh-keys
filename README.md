@@ -14,13 +14,15 @@
 import DHKeys from 'react-native-dh-keys';
 
 //Create Client Public and Private keys using P and G values
-DHKeys.getEncodedPublicKeyFromPg(P, G, ).then(({ clientPrivateKey, clientPublicKey }) => {
+DHKeys.getEncodedPublicKeyFromPg(P, G,).then(({ clientPrivateKey, clientPublicKey }) => {
 	console.log(`Private Key:  ${clientPrivateKey}  Public Key: ${clientPublicKey}`)
 });
 
 //In order to generate Shared key
-const sharedKey = DHKeys.getSharedSecretHex(serverPublicKey, clientPrivateKey);
-console.log(`Shared Key:  ${shareKey}`);
+// third param p is only for ios
+DHKeys.getSharedSecretHex(serverPublicKey, clientPrivateKey, P).then((sharedKey) => {
+console.log(`Shared Key:  ${sharedKey}`);
+});
 
 ```
   
