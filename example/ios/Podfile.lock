@@ -186,7 +186,11 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-dh-keys (1.2.2):
+  - react-native-aes (2.0.0):
+    - React-Core
+  - react-native-aes-pack (1.0.3):
+    - React
+  - react-native-dh-keys (2.0.2):
     - BigInt
     - React-Core
   - React-RCTActionSheet (0.63.4):
@@ -269,6 +273,8 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-aes (from `../node_modules/react-native-aes-crypto`)
+  - react-native-aes-pack (from `../node_modules/react-native-aes-pack`)
   - react-native-dh-keys (from `../..`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -318,6 +324,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-aes:
+    :path: "../node_modules/react-native-aes-crypto"
+  react-native-aes-pack:
+    :path: "../node_modules/react-native-aes-pack"
   react-native-dh-keys:
     :path: "../.."
   React-RCTActionSheet:
@@ -361,7 +371,9 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-dh-keys: b5cd40bc64f05f4dc62d6be5206c31898e08cf41
+  react-native-aes: c75c46aa744bef7c2415fdf7f5b2dcb75ca4364d
+  react-native-aes-pack: 0e458bb6a9586dbadb2c9fc8908108b4afad38de
+  react-native-dh-keys: 0f797a72e5816bae2b18d6cf70a0a0fb5557ea46
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0

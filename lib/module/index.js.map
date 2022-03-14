@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.tsx"],"names":["NativeModules","DhKeys"],"mappings":"AAAA,SAASA,aAAT,QAA8B,cAA9B;AAMA,MAAM;AAAEC,EAAAA;AAAF,IAAaD,aAAnB;AAEA,eAAeC,MAAf","sourcesContent":["import { NativeModules } from 'react-native';\n\ntype DhKeysType = {\n  multiply(a: number, b: number): Promise<number>;\n};\n\nconst { DhKeys } = NativeModules;\n\nexport default DhKeys;\n"]}

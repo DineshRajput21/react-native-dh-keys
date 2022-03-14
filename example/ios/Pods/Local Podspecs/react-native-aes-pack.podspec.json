@@ -1,0 +1,23 @@
+{
+  "name": "react-native-aes-pack",
+  "version": "1.0.3",
+  "summary": "The best aes encryption and decryption library for react-native",
+  "homepage": "https://github.com/lutakyn/react-native-aes-pack",
+  "license": "MIT",
+  "authors": {
+    "luther": "lutherking.dotse@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/lutakyn/react-native-aes-pack.git",
+    "tag": "1.0.3"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ios/**/*.{h,m}",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}

@@ -21,7 +21,6 @@ class DhKeys: NSObject {
         let privateKey = getDHPrivateKey()
         let publicKey = String(getDHPublicKey(base: generator, power: privateKey, modulus: primeNumber))
         let dhKeys = DHKeys(privateKey: privateKey, publicKey: publicKey)
-        
         return dhKeys;
     }
     private  func getDHPrivateKey() -> String {
