@@ -9,11 +9,11 @@ import {
   TouchableOpacity,
   View,
   Platform,
-  Alert,
 } from 'react-native';
 import axios from 'axios';
 import Aes from 'react-native-aes-crypto';
 import { hexaToDecimal, decimalToHexa } from './Utils';
+import { Buffer } from "buffer"
 
 const PG_ANDROID = {
   "p": "8f7935d9b9aae9bfabed887acf4951b6f32ec59e3baf3718e8eac4961f3efd3606e74351a9c4183339b809e7c2ae1c539ba7475b85d011adb8b47987754984695cac0e8f14b3360828a22ffa27110a3d62a993453409a0fe696c4658f84bdd20819c3709a01057b195adcd00233dba5484b6291f9d648ef883448677979cec04b434a6ac2e75e9985de23db0292fc1118c9ffa9d8181e7338db792b730d7b9e349592f68099872153915ea3d6b8b4653c633458f803b32a4c2e0f27290256e4e3f8a3b0838a1c450e4e18c1a29a37ddf5ea143de4b66ff04903ed5cf1623e158d487c608e97f211cd81dca23cb6e380765f822e342be484c05763939601cd667",
@@ -73,16 +73,18 @@ export default function App() {
     const sharedKey = await DhKeys.getSharedSecretHex(hexaToDecimal(serverPubKey), clientKeys.clientPrivateKey, iOSPlatform ? PG.p : '');
     const trimKey = decimalToHexa(sharedKey).substring(0, 64);
     setClientScecretKey(trimKey);
-    console.log("Shared Secret Key  "+decimalToHexa(sharedKey).toUpperCase());
-    console.log("Server pub Key  "+decimalToHexa(sharedKey).toUpperCase());
+    console.log("Shared Secret Key  " + decimalToHexa(sharedKey).toUpperCase());
+    console.log("Server pub Key  " + decimalToHexa(sharedKey).toUpperCase());
     console.log("client pub key  " + decimalToHexa(clientKeys.clientPublicKey));
   }
 
   const encryptMeClick = async () => {
     console.log("Secret key " + clientScret);
     const encryptrdData = await encryptData(payload, clientScret);
-    setEncryptedData(encryptrdData);
-    console.log("encrypted Data "+ encryptrdData)
+    const buffer = Buffer.from(encryptrdData, 'base64');
+    const encryptrdDataHex = buffer.toString('hex');
+    setEncryptedData(encryptrdDataHex);
+    console.log("encrypted Data " + encryptrdDataHex)
 
   }
   const decryptMeClick = () => {
