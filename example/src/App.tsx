@@ -29,7 +29,7 @@ const X_API_KEY = '5c80c3498f4d613eccb5952c0b607d78eb414f109fbfd44cdd179096';
 const DECRYPT_TEST_URL = 'https://phoenix.integrate.singlife.com/v11/sso-service/dh/testDecryptV2'; 
 
 export default function App() {
-  const [payload, setPayload] = React.useState('Dinesh');
+  const [payload, setPayload] = React.useState('');
   const [decryptedData, setDecryptedData] = React.useState('');
   const [encryptDataObj, setEncryptedData] = React.useState('');
   const [clientScret, setClientScecretKey] = React.useState('');
@@ -115,7 +115,9 @@ export default function App() {
     setPayload('');
     setDecryptedData('');
     setEncryptedData('');
-    setClientScecretKey('')
+    setClientScecretKey('');
+    setClientKeys({});
+    setServerPubKeys('');
   }
   const encryptData = async (text, key) => {
     const response = await Aes.encrypt(text, key, IV, 'aes-256-cbc');
@@ -123,7 +125,8 @@ export default function App() {
   }
   return (
     <SafeAreaView >
-      <View style={{ flex: 1, marginTop: 40, alignItems: 'center' }}>
+      <View style={{ flex: 1, marginVertical: 10, alignItems: 'center' }}>
+      <Text style={{color: 'black', height:30, paddingVertical:10, fontWeight:'600'}}> ================ DH Key Exchange =============== </Text>
         <TouchableOpacity onPress={generateClientKeys}
           style={{ padding: 10, marginTop: 10, height: 50, backgroundColor: 'black', justifyContent: 'center', }}>
           <Text style={{ color: 'white', alignSelf: 'center', fontSize: 18, fontWeight: 'bold' }}> Generate Client Keys </Text>
@@ -148,6 +151,7 @@ export default function App() {
                 {clientScret}
               </Text>
             </View>
+            <Text style={{color: 'black', height:25, paddingVertical:10, fontWeight:'600'}}> ============== AES Ecryption/Decryption ================ </Text>
             <TextInput
               value={payload}
               placeholder={"Please enter payload text here"}
@@ -181,7 +185,7 @@ export default function App() {
         }
 
       </View>
-      <View style={{ marginTop: 550 }}>
+      <View style={{ marginTop: 650 }}>
         <TouchableOpacity onPress={resetAll} style={{ padding: 10, marginTop: 100, height: 50, width: 400, backgroundColor: 'black', justifyContent: 'center' }}>
           <Text style={{ color: 'white', alignSelf: 'center', fontSize: 18, fontWeight: '700' }}> Reset All! </Text>
         </TouchableOpacity>
